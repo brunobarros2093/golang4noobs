@@ -38,12 +38,17 @@ func main() {
 	go escrever("Rodando em primeiro", canal)
 	//escrever("Rodando em segundo", canal)
 	//----------aqui o canal esta "enviando" algo para fora dele
-	for {
-		// checagem se o canal esta aberto ou fechado
-		mensagem, aberto := <-canal
-		if !aberto {
-			break
-		}
+	// COM LOOP INFINITO
+	//for {
+	//	// checagem se o canal esta aberto ou fechado
+	//	mensagem, aberto := <-canal
+	//	if !aberto {
+	//		break
+	//	}
+	//	fmt.Println(mensagem)
+	//}
+	// sem o loop infinito
+	for mensagem := range canal {
 		fmt.Println(mensagem)
 	}
 	fmt.Println("---Fim do programa")
