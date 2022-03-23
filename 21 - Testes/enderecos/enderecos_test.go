@@ -11,6 +11,8 @@ type cenarioDeTest struct {
 
 // TestTipoDeEndereco testes unitários - recebe um ponteiro de T
 func TestTipoDeEndereco(t *testing.T) {
+	//paralelismo nos testes
+	t.Parallel()
 	// vários cenários
 	cenariosDeTestes := []cenarioDeTest{
 
@@ -20,7 +22,7 @@ func TestTipoDeEndereco(t *testing.T) {
 		{"Estrada John Doe", "Estrada"},
 		{"Rodovia John Doe", "Rodovia"},
 		{"", "Tipo Inválido"},
-		{"Rua", "Tipo Inválido"},
+		{"birl", "Tipo Inválido"},
 	}
 
 	for _, cenario := range cenariosDeTestes {
@@ -28,5 +30,14 @@ func TestTipoDeEndereco(t *testing.T) {
 		if retornoRecebido != cenario.retornoEsperado {
 			t.Errorf("Tipo recebido é %s é diferente do esperado %s", retornoRecebido, cenario.retornoEsperado)
 		}
+	}
+}
+
+//TestQualquer para testar paralelismo
+func TestQualquer(t *testing.T) {
+	//paralelismo nos testes
+	t.Parallel()
+	if 1 > 2 {
+		t.Errorf("Teste Quebrou oh no ")
 	}
 }
