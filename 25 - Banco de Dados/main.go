@@ -27,10 +27,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	//agora o defer retorna um erro e o objeto
 	defer func(linhas *sql.Rows) {
-	_:
-		linhas.Close()
-
+		_ = linhas.Close()
 	}(linhas)
 	// retorna em bytes
 	fmt.Println(linhas)
