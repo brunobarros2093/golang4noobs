@@ -25,6 +25,7 @@ func main() {
 	fmt.Println("O JSON em struct: ", c)
 	fmt.Println("------------MAP-----------------")
 	cachorroMap := map[string]string{}
+	// if-ini --------------------------------------passado endereço do map para alterar a variavel acima diretamente
 	if err := json.Unmarshal([]byte(cachorroEmJSON), &cachorroMap); err != nil {
 		log.Fatal(err)
 	}
