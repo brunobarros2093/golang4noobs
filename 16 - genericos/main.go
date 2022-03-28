@@ -19,6 +19,7 @@ func min[T any](a T, b T) T {
 	return a
 }
 
+// o tio (tilde em ingles) - diz para o Go que td objeto que compõe o float64 será permitido, assim como INT
 type minTypes interface {
 	~float64 | int
 }
