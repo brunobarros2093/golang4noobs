@@ -4,13 +4,15 @@ import (
 	"crud-basico/banco"
 	"encoding/json"
 	"fmt"
+	"github.com/gorilla/mux"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 )
 
 //Letra maiuscula permite acesso as propriedades da Struct, se deixar letra minuscula não é alterado!
 type usuario struct {
-	id    int32  `json: "id"`
+	ID    int32  `json: "id"`
 	Nome  string `json: "nome"`
 	Email string `json: "email"`
 }
@@ -78,7 +80,7 @@ func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 	var usuarios []usuario
 	for linhasDoDb.Next() {
 		var usuario usuario
-		if erro := linhasDoDb.Scan(&usuario.id, &usuario.Nome, &usuario.Email); erro != nil {
+		if erro := linhasDoDb.Scan(&usuario.ID, &usuario.Nome, &usuario.Email); erro != nil {
 			// Estou ignorando e não tratando o erro que o Write pode retornar!
 			w.Write([]byte("Erro ao scannear usuário"))
 			return
@@ -98,5 +100,41 @@ func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
 
 // BuscarUsuario -  Traz um usuário especifico do banco de dados
 func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
+	parametros := mux.Vars(r)
+	// retorna um map com td recebido
+	ID, erro := strconv.ParseUint(parametros["id"], 10, 32)
+	if erro != nil {
+		w.Write([]byte("Erro ao converter parametro ID "))
+		return
+	}
+	db, erro := banco.Conectar()
+	if erro != nil {
+		w.Write([]byte("Erro ao conectar no banco"))
+		return
+	}
+	linha, err := db.Query("select * from usuarios where id = ?", ID)
+	if err != nil {
+		w.Write([]byte("Erro ao buscar usuário do banco."))
+		return
+	}
+	var usuario usuario
+	if linha.Next() {
+		// popula o struct acima
+		if erro := linha.Scan(&usuario.ID, &usuario.Nome, &usuario.Email); erro != nil {
+			w.Write([]byte("Erro instanciar usuario"))
+			return
+		}
+	}
+	// caso o usuário permaneça com ID zero, significa que nenhum foi encontrado
+	if usuario.ID == 0 {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	} else {
+		w.WriteHeader(http.StatusOK)
+		if erro := json.NewEncoder(w).Encode(usuario); erro != nil {
+			w.Write([]byte("Erro converter usuário para JSOn"))
+			return
+		}
+	}
 
 }
