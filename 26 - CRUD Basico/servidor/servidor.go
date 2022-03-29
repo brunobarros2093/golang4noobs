@@ -138,3 +138,71 @@ func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
 	}
 
 }
+
+// AtualizarUsuario -  Traz um usuário especifico do banco de dados e atualiza os dados
+func AtualizarUsuario(w http.ResponseWriter, r *http.Request) {
+	parametrosRecebidos := mux.Vars(r)
+	ID, erro := strconv.ParseUint(parametrosRecebidos["id"], 10, 32)
+	if erro != nil {
+		w.Write([]byte("Erro ao converter parametro ID para inteiro."))
+	}
+	bodyReq, erro := ioutil.ReadAll(r.Body)
+	if erro != nil {
+		w.Write([]byte("Erro ao ler corpo da requisição"))
+		return
+	}
+	var usuario usuario
+	// converte o usuario recebido no corpo da requisição para o struct acima!
+	if erro := json.Unmarshal(bodyReq, &usuario); erro != nil {
+		w.Write([]byte("Erro ao converter usuario."))
+		return
+	}
+	db, erro := banco.Conectar()
+	if erro != nil {
+		w.Write([]byte("Erro ao conectar no banco"))
+		return
+	}
+	defer db.Close()
+	// qlqr coisa que vá fazer inserção no banco precisa ser 'preparada' antes!
+	stmt, erro := db.Prepare("update usuarios set nome = ?, email = ? where id = ?")
+	if erro != nil {
+		w.Write([]byte("Erro criar statement"))
+		return
+	}
+	defer stmt.Close()
+	if _, erro := stmt.Exec(usuario.Nome, usuario.Email, ID); erro != nil {
+		w.Write([]byte("Erro ao atualizar usuário"))
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+// DeletarUsuario -  Deleta usuario by id
+func DeletarUsuario(w http.ResponseWriter, r *http.Request) {
+	parametro := mux.Vars(r)
+	ID, erro := strconv.ParseUint(parametro["id"], 10, 32)
+	if erro != nil {
+		w.Write([]byte("Erro ao converter ID do usuário"))
+		return
+	}
+	db, erro := banco.Conectar()
+	if erro != nil {
+		w.Write([]byte("Erro ao conectar no banco"))
+		return
+	}
+	defer db.Close()
+
+	stmt, erro := db.Prepare("delete from usuarios where id = ?")
+	if erro != nil {
+		w.Write([]byte("Erro criar statement"))
+		return
+	}
+	defer stmt.Close()
+	_, err := stmt.Exec(ID)
+	if err != nil {
+		w.Write([]byte("Erro ao apagar usuário do banco!"))
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+
+}
