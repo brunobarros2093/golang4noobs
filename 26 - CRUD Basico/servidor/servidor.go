@@ -2,19 +2,20 @@ package servidor
 
 import (
 	"crud-basico/banco"
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 )
 
+//Letra maiuscula permite acesso as propriedades da Struct, se deixar letra minuscula não é alterado!
 type usuario struct {
 	id    int32  `json: "id"`
-	nome  string `json: "nome"`
-	email string `json: "email"`
+	Nome  string `json: "nome"`
+	Email string `json: "email"`
 }
 
+// CriarUsuario - Cria usuários e insere no banco
 func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	bodyReq, err := ioutil.ReadAll(r.Body)
 
@@ -41,11 +42,9 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 		_, _ = w.Write([]byte("Erro ao criar statement"))
 		return
 	}
-	defer func(statement *sql.Stmt) {
-		_ = statement.Close()
+	defer statement.Close()
 
-	}(statement)
-	insert, erro := statement.Exec(usuario.nome, usuario.email)
+	insert, erro := statement.Exec(usuario.Nome, usuario.Email)
 	if erro != nil {
 		_, _ = w.Write([]byte("Erro ao executar statement"))
 		return
@@ -57,5 +56,47 @@ func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte(fmt.Sprintf("Usuário inserido com sucesso! Id: %d", id)))
+
+}
+
+// BuscarUsuarios -  Traz uma lista de usuários do banco
+func BuscarUsuarios(w http.ResponseWriter, r *http.Request) {
+	db, erro := banco.Conectar()
+	if erro != nil {
+		w.Write([]byte("Erro ao conectar no banco!"))
+		return
+	}
+	defer db.Close()
+
+	linhasDoDb, erro := db.Query("select * from usuarios")
+	if erro != nil {
+		w.Write([]byte("Erro buscar usuários"))
+		return
+	}
+	defer linhasDoDb.Close()
+
+	var usuarios []usuario
+	for linhasDoDb.Next() {
+		var usuario usuario
+		if erro := linhasDoDb.Scan(&usuario.id, &usuario.Nome, &usuario.Email); erro != nil {
+			// Estou ignorando e não tratando o erro que o Write pode retornar!
+			w.Write([]byte("Erro ao scannear usuário"))
+			return
+		}
+		// preenche o slice acima
+		usuarios = append(usuarios, usuario)
+	}
+	// retorna o status 200
+	w.WriteHeader(http.StatusOK)
+	// transformando o slice de usuários em json
+	if erro := json.NewEncoder(w).Encode(usuarios); erro != nil {
+		w.Write([]byte("Erro converter usuário para JSON"))
+		return
+	}
+
+}
+
+// BuscarUsuario -  Traz um usuário especifico do banco de dados
+func BuscarUsuario(w http.ResponseWriter, r *http.Request) {
 
 }
