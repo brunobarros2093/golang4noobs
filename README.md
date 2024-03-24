@@ -29,8 +29,8 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 # Instalação [https://go.dev/doc/install]
 
 # Introdução
-- [Variáveis][https://github.com/brunobarros2093/golang4noobs/blob/main/2%20-%20Variaveis/main.go]
-- [Funções][https://github.com/brunobarros2093/golang4noobs/tree/main/3%20-%20Funcoes]
+- [Variáveis](https://github.com/brunobarros2093/golang4noobs/blob/main/2%20-%20Variaveis/main.go)
+- [Funções](https://github.com/brunobarros2093/golang4noobs/tree/main/3%20-%20Funcoes)
 
 
 ## Mais conteudo 
