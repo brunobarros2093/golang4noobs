@@ -18,12 +18,22 @@ Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE para 
 O projeto está organizado em seções que abordam diferentes aspectos da linguagem Go:
 
 
-Atualmente repositório (meio) atualizado na versão 1.18
+Atualmente repositório (meio) atualizado na versão 1.19
 
+# O que é o Go(lang)?
 
-Sinta-se a vontade para contribuir e atualizar algo =) 
+Go, também conhecida como Golang, é uma linguagem de programação criada pela Google em 2007 e lançada em 2009. É uma linguagem de código aberto, compilada e concorrente, projetada para ser eficiente, simples e escalável. Algumas de suas características distintivas incluem um sistema de tipos estáticos, coleta de lixo automática, suporte para concorrência e facilidade de leitura e escrita de código. Go é frequentemente usada para desenvolvimento de sistemas de larga escala, aplicações de rede, serviços web e projetos de computação distribuída.
+
+Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a linguagem ficou carinhosamente conhecida como Golang (go language).
+
+# Instalação [https://go.dev/doc/install]
+
+# Introdução
+- [Variáveis][https://github.com/brunobarros2093/golang4noobs/blob/main/2%20-%20Variaveis/main.go]
+- [Funções][https://github.com/brunobarros2093/golang4noobs/tree/main/3%20-%20Funcoes]
+
 
 ## Mais conteudo 
-- Entenda o que são os arquivos go.mod e go.sum [https://aprendagolang.com.br/2022/06/17/entenda-o-que-sao-os-arquivos-go-mod-e-go-sum/]
-- Curso em Vídeo Aprenda Go [https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg]
-- Do zero ao Avançado curso Udemy [https://www.udemy.com/course/golang-do-zero-ao-avancado]
+- [Entenda o que são os arquivos go.mod e go.sum](https://aprendagolang.com.br/2022/06/17/entenda-o-que-sao-os-arquivos-go-mod-e-go-sum/)
+- [Curso em Vídeo Aprenda Go](https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg)
+- [Do zero ao Avançado curso Udemy](https://www.udemy.com/course/golang-do-zero-ao-avancado)
