@@ -29,3 +29,5 @@ resultado := nomeDaFuncao(argumentos)
 - Funções em Go têm escopo léxico, o que significa que elas podem acessar variáveis definidas no mesmo bloco ou em blocos externos.
 
 As funções desempenham um papel fundamental no desenvolvimento em Go, permitindo a criação de código modular e reutilizável.
+
+Mais sobre funções: [clique aqui](https://github.com/brunobarros2093/golang4noobs/tree/main/11%20-%20%20Funcoes%20pt%202)
