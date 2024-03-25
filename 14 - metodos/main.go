@@ -8,7 +8,7 @@ type usuario struct {
 }
 
 // todos os usuarios terão o método salvar
-// receiver
+// receiver\/
 func (u usuario) salvar() {
 	fmt.Println(u.idade)
 	fmt.Println("Metodo salvar do usuario")
