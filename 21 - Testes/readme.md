@@ -34,3 +34,5 @@ Neste exemplo, `TestAdd` é uma função de teste para a função `Add`. Ela cha
 Para executar os testes, você pode usar o comando `go test` no terminal. Se todos os testes passarem, ele imprimirá `ok`. Se algum teste falhar, ele imprimirá uma descrição do teste que falhou e o que era esperado.
 
 Além disso, o pacote `testing` fornece várias funções e tipos que ajudam a escrever testes unitários, incluindo funções para verificar se os valores são iguais (`Equal`), para verificar se um valor é verdadeiro (`True`), para verificar se um valor é falso (`False`), e assim por diante.
+
+## [Continua na parte 2](https://github.com/brunobarros2093/golang4noobs/tree/main/22%20-%20Testes%20avancados)
