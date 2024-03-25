@@ -31,7 +31,7 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 # Instalação [https://go.dev/doc/install]
 
 # Introdução
-- [Variáveis](https://github.com/brunobarros2093/golang4noobs/blob/main/2%20-%20Variaveis/main.go)
+- [Variáveis](https://github.com/brunobarros2093/golang4noobs/blob/main/2%20-%20Variaveis)
 - [Funções](https://github.com/brunobarros2093/golang4noobs/tree/main/3%20-%20Funcoes)
 - [Funções parte 2](https://github.com/brunobarros2093/golang4noobs/tree/main/11%20-%20%20Funcoes%20pt%202)
 # Abstrações e Herança  
@@ -44,17 +44,17 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 # Loops 
 - [For Loop](https://github.com/brunobarros2093/golang4noobs/tree/main/10%20-%20forloop)
 # Ifs, select e Switch
-- [Switch e if](https://github.com/brunobarros2093/golang4noobs/blob/main/9%20-%20Estrutudas%20de%20Controle/main.go)
-- [Select](https://github.com/brunobarros2093/golang4noobs/blob/main/19%20-%20Select/main.go)
+- [Switch e if](https://github.com/brunobarros2093/golang4noobs/blob/main/9%20-%20Estrutudas%20de%20Controle)
+- [Select](https://github.com/brunobarros2093/golang4noobs/blob/main/19%20-%20Select)
 # Arrays and Slices 
-- [Arrays e Slices](https://github.com/brunobarros2093/golang4noobs/blob/main/7%20-%20Arrays%20e%20Slices/main.go)
+- [Arrays e Slices](https://github.com/brunobarros2093/golang4noobs/blob/main/7%20-%20Arrays%20e%20Slices)
 # Panic/recover e Defer
 - [Panic e Recover](https://github.com/brunobarros2093/golang4noobs/tree/main/13%20-%20Panic%20e%20Recover)
-- [Defer](https://github.com/brunobarros2093/golang4noobs/blob/main/12%20-%20Defer/main.go)
+- [Defer](https://github.com/brunobarros2093/golang4noobs/blob/main/12%20-%20Defer)
 # Goroutines
 - [Go routines](https://github.com/brunobarros2093/golang4noobs/tree/main/18%20-%20Goroutines)
 # Ponteiros
-- [Ponteiros](https://github.com/brunobarros2093/golang4noobs/blob/main/6%20-%20ponteiros/main.go)
+- [Ponteiros](https://github.com/brunobarros2093/golang4noobs/blob/main/6%20-%20ponteiros)
 # Maps 
 - [Maps](https://github.com/brunobarros2093/golang4noobs/tree/main/8%20-%20Maps)
 
@@ -62,7 +62,7 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 # Projetos e exemplos 
 
 - [CRUD](https://github.com/brunobarros2093/golang4noobs/tree/main/26%20-%20CRUD%20Basico)
-- [HTTP](https://github.com/brunobarros2093/golang4noobs/blob/main/24%20-%20HTTP/main.go)
+- [HTTP](https://github.com/brunobarros2093/golang4noobs/blob/main/24%20-%20HTTP)
 - [Banco de Dados](https://github.com/brunobarros2093/golang4noobs/tree/main/25%20-%20Banco%20de%20Dados)
 - [JSON](https://github.com/brunobarros2093/golang4noobs/tree/main/23%20-%20JSON)
 - [CLI App](https://github.com/brunobarros2093/golang4noobs/tree/main/17%20-%20aplicac%C3%A3o%20cli)
