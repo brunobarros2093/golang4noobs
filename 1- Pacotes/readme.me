@@ -1,0 +1,19 @@
+# Pacotes
+
+Em Go, os pacotes são a unidade básica de organização do código fonte;
+
+Organização do Código: O código em Go é organizado em pacotes. Um pacote consiste em um ou mais arquivos Go que estão no mesmo diretório e têm a mesma declaração de pacote no início de cada arquivo.
+
+Encapsulamento: Os pacotes em Go fornecem um mecanismo de encapsulamento, onde as variáveis, funções e tipos definidos em um pacote podem ser acessados apenas por outros pacotes se forem exportados (começam com letra maiúscula).
+
+Reutilização de Código: Os pacotes permitem a reutilização de código. Você pode importar pacotes em seus programas Go e usar as funcionalidades fornecidas por eles. Isso promove a modularidade e a manutenibilidade do código.
+
+Declarando Pacotes: Para declarar um pacote em Go, basta adicionar a declaração package nomeDoPacote no início de cada arquivo do pacote. O nome do pacote deve corresponder ao nome do diretório onde os arquivos estão localizados.
+
+Importando Pacotes: Para usar funcionalidades de outros pacotes em seu programa, você os importa usando a palavra-chave import. Por exemplo: import "fmt" importa o pacote fmt, que fornece funcionalidades de formatação de entrada e saída.
+
+Nomenclatura de Pacotes: Em Go, a nomenclatura de pacotes segue a convenção de nomear os pacotes com letras minúsculas, sem sublinhados. Pacotes que são destinados a serem usados por outros programas devem ter nomes concisos e descritivos.
+
+Padrão de Organização de Pacotes: Go segue um padrão de organização de pacotes, onde os pacotes do padrão da biblioteca padrão são nomeados de forma descritiva e geralmente seguem o padrão import "github.com/username/pacote".
+
+Em resumo, os pacotes em Go são uma maneira de organizar e modularizar o código fonte, promovendo a reutilização e a manutenibilidade do código. Eles desempenham um papel crucial no ecossistema de desenvolvimento em Go.

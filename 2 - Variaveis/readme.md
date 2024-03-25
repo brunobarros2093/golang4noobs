@@ -1,3 +1,4 @@
+# Variáveis 
 Em Go, as variáveis são espaços de armazenamento que contêm valores. Aqui está uma breve explicação das variáveis em Go:
 
 Declaração: As variáveis em Go são declaradas usando a sintaxe var nome tipo. Por exemplo: var x int declara uma variável chamada x do tipo int.
