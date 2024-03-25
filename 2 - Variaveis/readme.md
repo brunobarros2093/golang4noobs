@@ -1,8 +1,3 @@
-package main
-
-import "fmt"
-
-/*
 Em Go, as variáveis são espaços de armazenamento que contêm valores. Aqui está uma breve explicação das variáveis em Go:
 
     Declaração: As variáveis em Go são declaradas usando a sintaxe var nome tipo. Por exemplo: var x int declara uma variável chamada x do tipo int.
@@ -18,23 +13,3 @@ Em Go, as variáveis são espaços de armazenamento que contêm valores. Aqui es
     Mutabilidade: A mutabilidade das variáveis depende do tipo. Por exemplo, as variáveis de tipo int são mutáveis, enquanto as de tipo string são imutáveis.
 
     Zero Values: Se uma variável é declarada sem ser inicializada explicitamente, ela recebe um "zero value" padrão. Por exemplo, 0 para números inteiros, 0.0 para floats, false para booleanos e "" para strings.
-
-*/
-
-func main() {
-	// expondo o tipo
-	var variavel1 string = "var 1"
-	// inferencia de tipo
-	variavel2 := "Variavel 2"
-	// explicitando o tipo
-	var (
-		var3 string
-		var4 string = "lalalala"
-	)
-	// varias instancias com inferencia de tipo
-	vari5, var6 := "variavel5", "variavel6"
-	//constante
-	const contante = "contante"
-
-	fmt.Println(variavel1, variavel2, var3, var4, vari5, var6, contante)
-}
