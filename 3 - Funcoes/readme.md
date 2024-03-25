@@ -21,3 +21,11 @@ func nomeDaFuncao(parametros) tipoDeRetorno {
 ```
 resultado := nomeDaFuncao(argumentos)
 ```
+
+## Considerações
+
+- Em Go, as funções podem retornar múltiplos valores.
+- Go suporta funções anônimas (funções sem nome) e funções como tipos.
+- Funções em Go têm escopo léxico, o que significa que elas podem acessar variáveis definidas no mesmo bloco ou em blocos externos.
+
+As funções desempenham um papel fundamental no desenvolvimento em Go, permitindo a criação de código modular e reutilizável.
