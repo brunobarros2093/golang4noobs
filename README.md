@@ -68,7 +68,7 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 - [CLI App](https://github.com/brunobarros2093/golang4noobs/tree/main/17%20-%20aplicac%C3%A3o%20cli)
 
 ## Mais conteudo 
-
+- [A Semana Go](https://asemanago.substack.com/) - Newsletter semanal 
 - [Entenda o que são os arquivos go.mod e go.sum](https://aprendagolang.com.br/2022/06/17/entenda-o-que-sao-os-arquivos-go-mod-e-go-sum/)
 - [Curso em Vídeo Aprenda Go](https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg)
 - [Do zero ao Avançado curso Udemy](https://www.udemy.com/course/golang-do-zero-ao-avancado)
