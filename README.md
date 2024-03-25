@@ -59,7 +59,8 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 - [Maps](https://github.com/brunobarros2093/golang4noobs/tree/main/8%20-%20Maps)
 
 
-# Projetos exemplos 
+# Projetos e exemplos 
+
 - [CRUD](https://github.com/brunobarros2093/golang4noobs/tree/main/26%20-%20CRUD%20Basico)
 - [HTTP](https://github.com/brunobarros2093/golang4noobs/blob/main/24%20-%20HTTP/main.go)
 - [Banco de Dados](https://github.com/brunobarros2093/golang4noobs/tree/main/25%20-%20Banco%20de%20Dados)
@@ -67,6 +68,7 @@ Como seria um pouco difícil procurar apenas por 'go' no google, acabou que a li
 - [CLI App](https://github.com/brunobarros2093/golang4noobs/tree/main/17%20-%20aplicac%C3%A3o%20cli)
 
 ## Mais conteudo 
+
 - [Entenda o que são os arquivos go.mod e go.sum](https://aprendagolang.com.br/2022/06/17/entenda-o-que-sao-os-arquivos-go-mod-e-go-sum/)
 - [Curso em Vídeo Aprenda Go](https://www.youtube.com/watch?v=WiGU_ZB-u0w&list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg)
 - [Do zero ao Avançado curso Udemy](https://www.udemy.com/course/golang-do-zero-ao-avancado)
