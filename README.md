@@ -1,8 +1,8 @@
 # Golang for Noobs
 
-Bem-vindo ao "Golang for Noobs"! Este é um projeto destinado a ensinar conceitos fundamentais da linguagem de programação Go (Golang) para iniciantes. Ainda estou adicionando a explicação em portugues (PT-BR) a alguns arquivos, este repositório foi usado em um mini-curso que ministro para times interessados em aprender Golang, por isso alguns arquivos não possuem a explicação detalhada AINDA, mas estou trabalhando nisso.
+Bem-vindo ao "Golang for Noobs"! Este é um projeto destinado a ensinar conceitos fundamentais da linguagem de programação Go (Golang) para iniciantes. Ainda estou adicionando a explicação em portugues (PT-BR) a alguns arquivos, este repositório foi usado em um mini-curso que ministro para times interessados em aprender Golang.
 
-EN: Welcome to "Golang for Noobs"! This is a project aimed at teaching fundamental concepts of the Go programming language (Golang) to beginners. I'm still adding explanations in Portuguese (PT-BR) to some files; this repository was used in a mini-course that I teach to teams interested in learning Golang, which is why some files don't have detailed explanations YET, but I'm working on it.
+EN: Welcome to "Golang for Noobs"! This is a project aimed at teaching fundamental concepts of the Go programming language (Golang) to beginners. I'm still adding explanations in Portuguese (PT-BR) to some files; this repository was used in a mini-course that I teach to teams interested in learning Golang.
 
 <hr>
 A linguagem Go, também conhecida como Golang, é uma linguagem de programação de código aberto desenvolvida pelo Google. Com uma sintaxe simples e eficiente, Go é projetado para facilitar a criação de software confiável e eficiente, especialmente em sistemas distribuídos e concorrentes.
